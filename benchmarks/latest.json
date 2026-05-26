@@ -1,0 +1,18 @@
+{
+  "total_spans": 10000,
+  "batch_size": 100,
+  "wall_seconds": 0.425,
+  "throughput_spans_per_sec": 23541.7,
+  "ingest_post_ms": {
+    "p50": 0.99,
+    "p95": 7.42,
+    "p99": 18.18,
+    "max": 18.59
+  },
+  "query_get_run_ms": {
+    "p50": 16.97,
+    "p95": 22.56,
+    "p99": 41.49
+  },
+  "query_list_runs_ms": 150.58
+}
