@@ -13,7 +13,7 @@ from typing import Any
 
 import httpx
 
-from .models import StubAdapter, get_adapter
+from .models import get_adapter
 from .schema import Span, SpanKind
 
 DEFAULT_MODEL = "claude-haiku-4-5"

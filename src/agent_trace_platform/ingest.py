@@ -60,7 +60,7 @@ class IngestBatcher:
                 await asyncio.wait_for(
                     self._state.flush_event.wait(), timeout=self.cfg.max_delay_ms / 1000
                 )
-            except asyncio.TimeoutError:
+            except TimeoutError:
                 pass
             await self._flush()
 

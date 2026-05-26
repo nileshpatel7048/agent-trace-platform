@@ -4,6 +4,7 @@ from __future__ import annotations
 import json
 import time
 import uuid
+from datetime import UTC
 from enum import Enum
 from typing import Any
 
@@ -71,9 +72,9 @@ class Span(BaseModel):
 
     def to_row(self) -> dict[str, Any]:
         """Flatten to a row matching the Iceberg schema."""
-        from datetime import date, datetime, timezone
+        from datetime import datetime
 
-        ts_date = datetime.fromtimestamp(self.ts_start_ns / 1e9, tz=timezone.utc).date()
+        ts_date = datetime.fromtimestamp(self.ts_start_ns / 1e9, tz=UTC).date()
         return {
             "trace_id": self.trace_id,
             "run_id": self.run_id,
